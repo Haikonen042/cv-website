@@ -1,0 +1,500 @@
+/* yleiset tyyli */
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+.student h2,
+.facts h2 {
+    padding-bottom: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.5em;
+    }
+    h2 {
+        font-size: 3.0em;
+    }
+    h3 {
+        font-size: 2.8em;
+    }
+    .student h2,
+    .facts h2 {
+        padding-bottom: 0em;
+    }
+    .facts h2,
+    .name h2,
+    .some h2,
+    .weather h2 {
+        padding-top: 0.5em;
+    }
+    .row img {
+        padding-top: 1em;
+    }
+    .hoverBW img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .bgimg-2 {
+        margin-bottom: 2em;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "DM Mono", monospace, sans-serif;
+    color: #777;
+    background-color: #f2f2f2;
+}
+
+/* yleiset tyyli end*/
+
+/* kuva tyylejä */
+
+#omakuva {
+    border-radius: 100%;
+    width: 200px;
+}
+
+#logo {
+    max-width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding-top: 10px;
+}
+
+/* kuva tyylejä end */
+
+/* parallax effect 
+https://www.w3schools.com/howto/howto_css_parallax.asp */
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("kuvat/shattered-island.gif");
+    min-height: 600px;
+}
+
+.bgimg-2 {
+    background-image: url("kuvat/shattered-island.gif");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("kuvat/shattered-island.gif");
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption h1 {
+    color: white;
+}
+
+.col-sm img {
+    width: 100%;
+    height: auto;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+/*parallax effect end*/
+
+/* slider/carousel,
+https://codepen.io/decibeldesign/pen/bMrQKN*/
+
+.slider {
+    background-color: #f2f2f2;
+}
+
+.carousel-nav-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.carousel-item .col,
+.carousel-item .col-sm,
+.carousel-item .col-md {
+    margin: 8px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*slider/carousel end*/
+
+/*navi,
+https://codepen.io/deyand/pen/pvmyjw*/
+
+.mobile-menu {
+    display: block;
+    width: 100%;
+    background: #8aa8bd;
+    line-height: 1.6em;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+/*Strip the ul of padding and list styling*/
+
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    background: #8aa8bd;
+}
+
+/*Create a horizontal list with spacing*/
+
+.mobile-menu li {
+    display: inline-block;
+    /*float: left;
+	margin-right: 1px;*/
+}
+
+/*Style for menu links*/
+
+.mobile-menu li a {
+    display: block;
+    min-width: 140px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    background: #8aa8bd;
+    text-decoration: none;
+    margin-left: -5px;
+    padding: 10px 0;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+/*Hover state for top level links*/
+
+.mobile-menu li:hover a {
+    color: #4db3ff;
+    background-color: #ccddee;
+}
+
+/*Style for dropdown links*/
+
+.mobile-menu li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+
+.mobile-menu li:hover .mobile-menu ul a:hover {
+    color: #4db3ff;
+}
+
+/*Hide dropdown links until they are needed*/
+
+.mobile-menu li ul {
+    display: none;
+}
+
+/*Make dropdown links vertical*/
+
+.mobile-menu li ul li {
+    display: block;
+    float: none;
+}
+
+/*Prevent text wrapping*/
+
+.mobile-menu li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+
+.mobile-menu .show-menu {
+    text-decoration: none;
+    color: #fff;
+    background: #8aa8bd;
+    text-align: center;
+    padding: 10px 15px;
+    display: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.mobile-menu .show-menu span {
+    padding-left: 25px;
+}
+
+/*Hide checkbox*/
+
+.mobile-menu input[type=checkbox] {
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+
+.mobile-menu input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width: 1000px) {
+    .mobile-menu .lines {
+        border-bottom: 15px double #f8f8f8;
+        border-top: 5px solid #f8f8f8;
+        content: "";
+        height: 5px;
+        width: 20px;
+        padding-right: 15px;
+        float: right;
+    }
+    /*Make dropdown links appear inline*/
+    .mobile-menu ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    .mobile-menu li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    .mobile-menu ul li,
+    .mobile-menu li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .mobile-menu .show-menu {
+        display: block;
+    }
+}
+
+/*navi end*/
+
+/*gallery,
+https://codepen.io/nsom/pen/VbqLew.
+hover-efekti: https://codepen.io/nxworld/pen/ZYNOBZ*/
+
+.row-testi {
+    margin: 15px;
+}
+
+.hoverBW img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hoverBW img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/*gallery end*/
+
+/* hover effect,
+https://github.com/IanLunn/Hover
+*/
+
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(32, 152, 209, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* hover effects end */
+
+/* Form Styles,
+form with svg-radio: https://codepen.io/AngelaVelasquez/pen/BWXbxP*/
+
+.form-wrapper {
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+    padding: 50px 80px 0px 80px;
+    text-align: justify;
+}
+
+.form {
+    width: 250px;
+    height: 330px;
+    padding: 5px;
+}
+
+.form__title {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.form__instruction {
+    font-size: 22px;
+}
+
+.form__options {
+    border: none;
+    padding: 0;
+}
+
+.form__question {
+    font-size: 1.3em;
+}
+
+.form__answer {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 45%;
+    vertical-align: top;
+    font-size: 22px;
+    text-align: center;
+}
+
+label {
+    border: 1px solid rgba(250, 250, 250, 0.15);
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    opacity: .5;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+label:hover,
+label:focus,
+label:active {
+    border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.form__button,
+#find {
+    width: 100%;
+    margin: 10px 15px 10px 0;
+    padding: 5px;
+    background-color: #f2f2f2;
+    color: #000;
+    height: 41px;
+    font-size: 16px
+}
+
+.form__button:hover,
+.form__button:focus,
+#find:hover,
+#find:focus {
+    background-color: #2098D1;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type="radio"]:active ~ label {
+    opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+    opacity: 1;
+    border: 1px solid #FAFAFA;
+}
+
+#city {
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+}
+
+/* form style end */
+
+/* neon text effect
+https://codepen.io/AllThingsSmitty/pen/VzXrgY*/
+
+.neon {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0055ff,
+    0 0 80px #0055ff,
+    0 0 90px #0055ff,
+    0 0 100px #0055ff,
+    0 0 150px #0055ff
+}
+
+/* neon text effect end */

@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- gallery -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+
+    <!--- style -->
+    <link href="curriculumstyle.css" rel="stylesheet">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <title>harjoitustyö</title>
+</head>
+
+<body>
+     
+    <nav class="mobile-menu">        
+        <label for="show-menu" class="show-menu"><span>menu</span><div class="lines"></div></label>
+        <input type="checkbox" id="show-menu">
+        <ul id="menu">
+            <li> <a href="#top">top</a></li>
+            <li><a href="#me">me</a></li>
+            <li> <a href="#gallery">work</a></li>
+            <li><a href="#carousel">skills</a></li>
+            <li><a href="#hire">question</a></li>
+            <li> <a href="#findme">find me</a></li>
+            <li><a href="#weather">weather</a></li>
+        </ul>           
+    </nav>
+         
+
+    <div class="bgimg-1" id="top">
+        <div class="caption">
+            <h1 class="neon">this is me</h1>
+        </div>
+    </div>
+
+    <!-- me-div -->
+    <div id="me" style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 student">
+                    <h2>student</h2>
+                    <p>haaga-helia uas</p>
+                    <p>digital services</p>
+                    <p>programming</p>
+                    <p>average grade 4.3</p>
+                    <p>graduating 2022</p>
+                </div>
+                <div class="col-sm-4 name">
+                    <h2>krista haikonen</h2>
+                    <img id="omakuva" src="kuvat/omakuva.jpg" alt="my photo">
+                </div>
+                <div class="col-sm-4 facts">
+                    <h2>facts</h2>
+                    <p>I'm very persistent what comes to finding a solution in the problem in hands.</p>
+                    <p>I find small details very important when finishing the work.</p>
+                    <p>I value good communication especially when working with team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- me-div end -->
+
+    <div class="bgimg-2" id="gallery">
+        <div class="caption">
+            <h1 class="neon">i made these</h1>
+            <h3 class="neon">with team</h3>
+        </div>
+    </div>
+
+    <!--  galleria  -->
+    <div class="container-fluid hoverBW">
+        <div class="row row-testi">
+            <a href="kuvat/kalenteri1200.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/kalenteri600.JPG" class="img-fluid rounded">
+    </a>
+            <a href="kuvat/kirppis1200.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/kirppis600.JPG" class="img-fluid rounded">
+    </a>
+            <a href="kuvat/kysely1200.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/kysely600.JPG" class="img-fluid rounded">
+    </a>
+        </div>
+        <div class="row row-testi">
+            <a href="kuvat/matkat1200.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/matkat600.JPG" class="img-fluid rounded">
+    </a>
+            <a href="kuvat/ravintola1200.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/ravintola600.JPG" class="img-fluid rounded">
+    </a>
+            <a href="kuvat/react1200.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="kuvat/react600.png" class="img-fluid rounded">
+    </a>
+        </div>
+    </div>
+    <!--  galleria end -->
+
+    <div class="bgimg-3" id="carousel">
+        <div class="caption">
+            <h1 class="neon">skills</h1>
+        </div>
+    </div>
+
+    <!-- karuselli -->
+    <div class="my-5 text-center container-fluid slider">
+        <div class="row d-flex align-items-center">
+            <div class="col-1 d-flex align-items-center justify-content-center">
+                <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <div class="carousel-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+               </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="col-10">
+                <!--Start carousel-->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>react</h1>
+                                </div>
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>java</h1>
+                                </div>
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>blender</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>html</h1>
+                                </div>
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>css</h1>
+                                </div>
+                                <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                    <h1>js</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End carousel-->
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center" style="background-color: #f2f2f2;">
+                <a href="#carouselExampleIndicators" data-slide="next">
+                    <div class="carousel-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+            </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--  karuselli end -->
+
+    <!--  footer  -->
+    <div class="container-fluid form-wrapper" id="hire" style="position:relative;">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2>question</h2>
+                <div class="form">
+                    <form id="hireMe" onsubmit="return false">
+                        <fieldset class="form__options">
+                            <legend class="form__question">would you hire me?
+                            </legend>
+                            <p class="form__answer">
+                                <input type="radio" name="hire" id="yes" value="yes" checked>
+                                <label for="yes">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+    <title>Tattoo</title>
+    <path style="fill:#F5E0BC;" d="M460.915,288.108h-38.426l14.102,114.554c0,22.704-14.785,41.955-35.251,48.639
+	c-5.013,1.641-10.36,2.532-15.919,2.532H370.14c-8.932,0-17.185-2.876-23.899-7.757c-10.177-7.393-16.79-19.383-16.79-32.922
+	v-16.871v-0.425c0,14.795-5.995,28.183-15.686,37.874c-6.218,6.228-13.965,10.927-22.623,13.489
+	c-4.83,1.438-9.955,2.208-15.251,2.208c-9.57,0-18.552-2.512-26.33-6.907l-5.872,4.849c-3.387,2.797-5.349,6.961-5.349,11.354l0,0
+	c0,6.147,1.043,12.051,2.957,17.54c4.577,11.089,12.243,20.993,21.945,27.555c8.091,5.104,17.651,8.091,27.899,8.172
+	c0.162,0.01,0.314,0.01,0.476,0.01h54.624h55.1h9.712c41.365,0,74.898-33.533,74.898-74.898V313.141
+	C485.948,299.316,474.74,288.108,460.915,288.108z"/>
+<path style="fill:#FFCEBF;" d="M343.961,169.199c-8.01,0-14.512,6.491-14.512,14.512v0.577c0-24.243-19.646-43.9-43.9-43.9h-14.937
+	c-26.674,0-48.294,21.631-48.294,48.305c0-10.086-4.091-19.221-10.694-25.823c-6.613-6.613-15.747-10.704-25.833-10.704h-8.02
+	c-29.276,0-53.014,23.737-53.014,53.014c0-4.213-1.701-8.02-4.456-10.775c-2.754-2.754-6.562-4.456-10.775-4.456H94.964
+	c-34.522,0-62.502,27.98-62.502,62.502v99.688v21.752v16.983c0,1.681,0.091,3.342,0.263,4.982
+	c2.491,23.048,21.995,40.983,45.692,40.983h0.385c23.696,0,43.201-17.935,45.692-40.983c0.162-1.58,0.253-3.19,0.263-4.82v4.82
+	v3.271c0,20.831,16.881,37.712,37.712,37.712h22.137c20.831,0,37.712-16.881,37.712-37.712v-3.271
+	c0,14.957,6.127,28.487,16.021,38.208c3.342,3.281,7.109,6.137,11.22,8.456c7.777,4.395,16.76,6.907,26.33,6.907
+	c5.296,0,10.42-0.77,15.251-2.208c8.658-2.562,16.405-7.261,22.623-13.489c9.691-9.691,15.686-23.079,15.686-37.874v0.425v16.871
+	c0,13.539,6.613,25.529,16.79,32.922c6.714,4.881,14.967,7.757,23.899,7.757h15.281c5.56,0,10.907-0.891,15.919-2.532
+	c20.466-6.684,35.251-25.934,35.251-48.639V288.108v-26.279C436.59,210.679,395.121,169.199,343.961,169.199z"/>
+<rect x="32.462" y="351.88" style="fill:#7ACBA7;" width="92.3" height="43.98"/>
+<path style="fill:#FFBEAA;" d="M63.108,395.856c-0.172-1.64-0.263-3.301-0.263-4.982v-16.983v-21.752v-99.688
+	c0-30.894,22.413-56.531,51.864-61.583c-1.619-0.585-3.358-0.92-5.181-0.92H94.964c-34.522,0-62.502,27.98-62.502,62.502v99.688
+	v21.752v16.983c0,1.681,0.091,3.342,0.263,4.982c2.491,23.048,21.995,40.983,45.692,40.983h0.385c5.253,0,10.298-0.885,14.999-2.508
+	C77.294,428.634,65.046,413.796,63.108,395.856z"/>
+<path style="fill:#57BF93;" d="M32.725,395.856h30.382l0,0c-0.172-1.64-0.263-3.301-0.263-4.982v-16.983v-21.752v-0.263H32.462
+	v0.263v21.752v16.983C32.462,392.555,32.553,394.216,32.725,395.856L32.725,395.856z"/>
+<rect x="222.32" y="352.14" style="fill:#7ACBA7;" width="107.13" height="43.717"/>
+<rect x="222.32" y="298.36" style="fill:#B2DA7B;" width="107.13" height="53.783"/>
+<path style="fill:#EC5569;" d="M196.556,247.601c-5.124-5.124-13.428-5.124-18.552,0l-2.896,2.896c-0.689,0.689-1.803,0.689-2.491,0
+	l-2.846-2.846c-5.124-5.124-13.428-5.124-18.552,0c-2.562,2.552-3.838,5.914-3.838,9.266s1.276,6.714,3.838,9.276l21.398,21.398
+	c0.689,0.689,1.803,0.689,2.501,0l21.438-21.438C201.67,261.029,201.67,252.725,196.556,247.601z"/>
+<path style="fill:#FFBEAA;" d="M460.915,288.108H436.59v114.554c0,22.704-14.785,41.955-35.251,48.639
+	c-5.013,1.641-10.36,2.532-15.919,2.532h-15.281c-8.932,0-17.185-2.876-23.899-7.757c-10.177-7.393-16.79-19.383-16.79-32.922
+	v-16.871v-0.425c0,14.795-5.995,28.183-15.686,37.874c-6.218,6.228-13.965,10.927-22.623,13.489
+	c-4.83,1.438-9.955,2.208-15.251,2.208c-9.57,0-18.552-2.512-26.33-6.907l-5.872,4.849c-3.387,2.797-5.349,6.961-5.349,11.354l0,0
+	c0,6.147,1.043,12.051,2.957,17.54c4.577,11.089,12.243,20.993,21.945,27.555c8.091,5.104,17.651,8.091,27.899,8.172
+	c0.162,0.01,0.314,0.01,0.476,0.01h54.624h55.1h9.712c41.365,0,74.898-33.533,74.898-74.898V313.141
+	C485.948,299.316,474.74,288.108,460.915,288.108z"/>
+<path style="fill:#B2DA7B;" d="M346.239,446.075c6.714,4.881,14.967,7.757,23.899,7.757h15.281c5.56,0,10.906-0.891,15.919-2.532
+	v0.01V512h-55.1v-5.894v-55.849v-4.182H346.239z"/>
+<path style="fill:#FFBEAA;" d="M291.14,447.219v64.771c-10.248-0.081-19.808-3.068-27.899-8.172
+	c-9.701-6.562-17.367-16.466-21.945-27.555c-1.914-5.489-2.957-11.393-2.957-17.54l0,0c0-4.393,1.961-8.557,5.349-11.354
+	l5.872-4.849c7.777,4.395,16.76,6.906,26.33,6.906C281.185,449.427,286.309,448.657,291.14,447.219z"/>
+<g>
+	<path style="fill:#EC5569;" d="M174.743,307.63c-4.195,0-7.595,3.4-7.595,7.595v20.477c0,4.195,3.4,7.595,7.595,7.595
+		s7.595-3.4,7.595-7.595v-20.477C182.338,311.031,178.938,307.63,174.743,307.63z"/>
+	<path style="fill:#EC5569;" d="M153.325,354.73c-4.195,0-7.595,3.4-7.595,7.595v20.486c0,4.195,3.4,7.595,7.595,7.595
+		s7.595-3.4,7.595-7.595v-20.486C160.92,358.13,157.519,354.73,153.325,354.73z"/>
+	<path style="fill:#EC5569;" d="M190.865,376.725c-4.195,0-7.595,3.4-7.595,7.595v20.486c0,4.195,3.4,7.595,7.595,7.595
+		s7.595-3.4,7.595-7.595V384.32C198.46,380.126,195.059,376.725,190.865,376.725z"/>
+</g>
+<g>
+	<path style="fill:#2E3C43;" d="M294.914,240.274c-3.884-1.587-8.316,0.275-9.903,4.158l-8.79,21.509l-8.277-21.379
+		c-1.515-3.911-5.915-5.856-9.825-4.34c-3.912,1.515-5.855,5.913-4.34,9.825l15.169,39.18c0.11,0.283,0.248,0.549,0.388,0.812H269.3
+		c0.054,0.107,0.099,0.22,0.156,0.326c2.431,4.556,7.132,5.22,11.015,1.772c1.053-0.935,1.953-2.022,2.759-3.191l15.843-38.769
+		C300.659,246.296,298.798,241.861,294.914,240.274z"/>
+	<path style="fill:#2E3C43;" d="M88.038,278.891H77.911v-31.585c0-4.195-3.4-7.595-7.595-7.595s-7.595,3.4-7.595,7.595v39.18
+		c0,4.195,3.4,7.595,7.595,7.595h17.722c4.195,0,7.595-3.4,7.595-7.595S92.232,278.891,88.038,278.891z"/>
+	<path style="fill:#2E3C43;" d="M393.431,254.9c4.195,0,7.595-3.4,7.595-7.595s-3.4-7.595-7.595-7.595h-19.677
+		c-4.195,0-7.595,3.4-7.595,7.595v39.18c0,4.195,3.4,7.595,7.595,7.595h19.677c4.195,0,7.595-3.4,7.595-7.595
+		s-3.4-7.595-7.595-7.595h-12.082v-4.405h9.742c4.195,0,7.595-3.4,7.595-7.595s-3.4-7.595-7.595-7.595h-9.742V254.9H393.431z"/>
+</g>
+<g>
+	<path style="fill:#F7CF69;" d="M403.067,165.839c1.483,1.483,3.428,2.225,5.371,2.225s3.888-0.742,5.371-2.225l28.102-28.102
+		c2.966-2.966,2.966-7.775,0-10.741c-2.967-2.966-7.775-2.966-10.742,0l-28.102,28.102
+		C400.101,158.064,400.101,162.873,403.067,165.839z"/>
+	<path style="fill:#F7CF69;" d="M296.315,112.918c3.573,0,6.57-2.47,7.379-5.795l12.474-46.533c1.086-4.052-1.318-8.216-5.369-9.302
+		c-4.061-1.089-8.217,1.318-9.303,5.369l-12.517,46.694c-0.172,0.641-0.259,1.313-0.259,1.977
+		C288.72,109.523,292.12,112.918,296.315,112.918z"/>
+	<path style="fill:#F7CF69;" d="M166.473,107.049c0.78,3.365,3.797,5.869,7.399,5.869c4.195,0,7.595-3.405,7.595-7.6
+		c0-0.664-0.087-1.325-0.259-1.967l-12.517-46.694c-1.085-4.052-5.252-6.454-9.302-5.369c-4.052,1.086-6.456,5.251-5.369,9.302
+		L166.473,107.049z"/>
+	<path style="fill:#F7CF69;" d="M62.454,171.915c1.483,1.483,3.427,2.225,5.37,2.225s3.888-0.742,5.37-2.225
+		c2.966-2.966,2.966-7.775,0-10.741l-34.178-34.178c-2.966-2.966-7.775-2.966-10.741,0c-2.966,2.966-2.966,7.775,0,10.741
+		L62.454,171.915z"/>
+	<path style="fill:#F7CF69;" d="M352.272,131.912c1.069,0.522,2.201,0.769,3.317,0.769c2.67,0,5.242-1.414,6.626-3.86l42.563-73.731
+		c2.098-3.633,0.852-8.278-2.78-10.375c-3.635-2.097-8.279-0.853-10.375,2.78l-42.594,73.784c-0.089,0.153-0.181,0.329-0.259,0.488
+		C346.932,125.536,348.502,130.073,352.272,131.912z"/>
+	<path style="fill:#F7CF69;" d="M235.098,114.594c4.195,0,7.595-3.4,7.595-7.595V68.584c0-4.195-3.4-7.595-7.595-7.595
+		s-7.595,3.4-7.595,7.595v38.415C227.503,111.194,230.904,114.594,235.098,114.594z"/>
+	<path style="fill:#F7CF69;" d="M235.098,45.51c4.195,0,7.595-3.4,7.595-7.595V7.595c0-4.195-3.4-7.595-7.595-7.595
+		s-7.595,3.4-7.595,7.595v30.319C227.503,42.109,230.904,45.51,235.098,45.51z"/>
+	<path style="fill:#F7CF69;" d="M107.932,128.752c1.368,2.495,3.958,3.933,6.651,3.933c1.119,0,2.257-0.248,3.331-0.773
+		c3.77-1.839,5.33-6.396,3.491-10.166c-0.077-0.159-0.16-0.314-0.248-0.467L78.565,47.495c-2.098-3.633-6.744-4.878-10.375-2.781
+		c-3.633,2.097-4.878,6.742-2.781,10.375L107.932,128.752z"/>
+</g>
+<path style="fill:#22A898;" d="M60.814,380.716H32.462v-15.19h28.352c4.142,0,7.5,3.358,7.5,7.5v0.19
+	C68.314,377.358,64.956,380.716,60.814,380.716z"/>
+<g>
+	<path style="fill:#7ACBA7;" d="M329.449,413.153v-16.871v-0.425c0,5.756-0.918,11.294-2.597,16.489v54.124
+		c0,4.195-3.4,7.595-7.595,7.595s-7.595-3.4-7.595-7.595v-30.76c-5.829,5.243-12.81,9.228-20.522,11.51v64.771
+		c0.162,0.01,0.314,0.01,0.476,0.01h54.624v-5.894v-55.849v-4.182C336.062,438.682,329.449,426.692,329.449,413.153z"/>
+	<path style="fill:#7ACBA7;" d="M319.257,474.064c4.195,0,7.595-3.4,7.595-7.595v-54.124c-2.637,8.158-7.168,15.464-13.089,21.385
+		c-0.68,0.681-1.385,1.335-2.101,1.979v30.76C311.662,470.664,315.062,474.064,319.257,474.064z"/>
+</g>
+<path style="fill:#22A898;" d="M319.257,474.064c4.195,0,7.595-3.4,7.595-7.595v-54.124c-2.637,8.158-7.168,15.464-13.089,21.385
+	c-0.68,0.681-1.385,1.335-2.101,1.979v30.76C311.662,470.664,315.062,474.064,319.257,474.064z"/>
+<path style="fill:#FFA78F;" d="M416.094,448.935c20.466-6.684,35.251-25.934,35.251-48.639V288.108H436.59v114.554
+	c0,22.704-14.785,41.955-35.251,48.639c-0.166,0.054-0.335,0.101-0.502,0.154C406.158,451.386,411.281,450.511,416.094,448.935z"/>
+<g>
+	<path style="fill:#9BD04C;" d="M367.704,470.246v-16.414h15.19v16.414c0,4.142-3.358,7.5-7.5,7.5h-0.19
+		C371.061,477.746,367.704,474.388,367.704,470.246z"/>
+	<path style="fill:#9BD04C;" d="M278.418,316.932h51.031v15.19h-51.031c-4.142,0-7.5-3.358-7.5-7.5v-0.19
+		C270.918,320.29,274.276,316.932,278.418,316.932z"/>
+</g>
+<path style="fill:#FFBEAA;" d="M124.757,397.613v1.514c0,1.69,0.122,3.351,0.338,4.982c-0.023-0.221-0.054-0.438-0.074-0.66
+	C124.848,401.527,124.757,399.582,124.757,397.613z"/>
+<path id="SVGCleanerId_0" style="fill:#FFBEAA;" d="M126.969,247.53c-0.245-1.336-2.212-1.15-2.212,0.208v149.875
+	c0,1.969,0.091,3.914,0.263,5.836c0.02,0.222,0.052,0.439,0.074,0.66c2.439,18.474,18.234,32.731,37.374,32.731h7.15
+	c-7.776-8.566-13.006-20.27-14.217-33.39C155.259,401.844,133.98,285.757,126.969,247.53z"/>
+<path style="fill:#EC5569;" d="M153.325,354.73c-4.195,0-7.595,3.4-7.595,7.595v20.486c0,4.195,3.4,7.595,7.595,7.595
+	s7.595-3.4,7.595-7.595v-20.486C160.92,358.13,157.519,354.73,153.325,354.73z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#FFBEAA;" d="M126.969,247.53c-0.245-1.336-2.212-1.15-2.212,0.208v149.875
+		c0,1.969,0.091,3.914,0.263,5.836c0.02,0.222,0.052,0.439,0.074,0.66c2.439,18.474,18.234,32.731,37.374,32.731h7.15
+		c-7.776-8.566-13.006-20.27-14.217-33.39C155.259,401.844,133.98,285.757,126.969,247.53z"/>
+</g>
+<path style="fill:#E63950;" d="M153.083,390.394c-1.476-8.159-3.549-19.551-5.913-32.507c-0.902,1.249-1.44,2.779-1.44,4.438v20.486
+	C145.73,386.924,149.001,390.265,153.083,390.394z"/>
+<path style="fill:#FFBEAA;" d="M224.53,259.704c-0.245-1.336-2.212-1.15-2.212,0.208v135.944c0,14.957,6.127,28.487,16.021,38.208
+	c3.342,3.281,7.109,6.137,11.22,8.456c5.282,2.985,11.121,5.098,17.322,6.149C228.911,404.109,231.541,297.931,224.53,259.704z"/>
+<path style="fill:#9BD04C;" d="M228.705,298.356h-6.386v53.783h11.823C231.594,333.297,230.06,314.653,228.705,298.356z"/>
+<path style="fill:#57BF93;" d="M242.427,395.856c-3.658-13.995-6.285-28.916-8.286-43.717h-11.823v43.717l0,0H242.427z"/>
+<g>
+	<path style="fill:#000005;" d="M329.19,426.425c0.02,0.222,0.051,0.439,0.074,0.66c-0.039-0.293-0.057-0.592-0.09-0.887
+		C329.181,426.273,329.183,426.35,329.19,426.425z"/>
+	<path style="opacity:0.1;fill:#000005;enable-background:new    ;" d="M329.19,426.425c0.02,0.222,0.051,0.439,0.074,0.66
+		c-0.039-0.293-0.057-0.592-0.09-0.887C329.181,426.273,329.183,426.35,329.19,426.425z"/>
+</g>
+<path style="fill:#FFBEAA;" d="M331.139,270.506c-0.24-1.337-2.212-1.151-2.212,0.208V403.27c0.336-2.424,0.522-4.896,0.522-7.414
+	v0.425v16.871c0,13.539,6.613,25.529,16.79,32.922c6.456,4.694,14.338,7.525,22.875,7.736
+	C337.52,410.874,338.533,311.632,331.139,270.506z"/>
+<path style="fill:#22A898;" d="M250.656,380.872h-28.338v-15.19h28.338c4.142,0,7.5,3.358,7.5,7.5v0.19
+	C258.156,377.514,254.798,380.872,250.656,380.872z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+					YES
+				</label>
+                            </p>
+
+                            <p class="form__answer">
+                                <input type="radio" name="hire" id="no" value="no">
+                                <label for="no">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+    <title>Heartbreak</title>
+    <path style="fill:#72CCAF;" d="M437.777,81.602c-0.754-3.001-3.927-4.682-6.833-3.62c-13.337,4.876-48.291,20.165-64.77,51.275
+	c-16.477,31.105-9.494,68.606-6.035,82.383c0.754,3.004,3.931,4.687,6.84,3.623c13.341-4.878,48.288-20.168,64.765-51.273
+	C448.223,132.881,441.236,95.374,437.777,81.602z"/>
+<g>
+	<path style="fill:#ABD276;" d="M511.257,175.11c1.591-2.658,0.534-6.094-2.275-7.399c-12.882-5.984-48.405-19.884-82.051-9.54
+		c-42.074,12.935-65.28,58.883-65.28,58.883s45.01,24.977,87.085,12.042C482.381,218.752,503.961,187.297,511.257,175.11z"/>
+	<path style="fill:#ABD276;" d="M319.706,67.449c-2.658-1.591-6.094-0.534-7.399,2.275c-5.984,12.882-19.884,48.405-9.54,82.051
+		c12.935,42.074,58.883,65.28,58.883,65.28s24.977-45.01,12.042-87.085C363.349,96.324,331.894,74.744,319.706,67.449z"/>
+	<path style="fill:#ABD276;" d="M74.221,430.393c0.754,3.004,3.931,4.687,6.84,3.623c13.341-4.878,48.288-20.168,64.765-51.273
+		c20.605-38.897,4.523-87.797,4.523-87.797s-49.488,14.166-70.093,53.063C63.779,379.115,70.762,416.616,74.221,430.393z"/>
+</g>
+<path style="fill:#9BD04C;" d="M115.661,349.568c10.114-19.094,23.002-33.783,37.766-42.208c-1.523-7.684-3.078-12.413-3.078-12.413
+	s-49.488,14.166-70.093,53.063c-16.477,31.105-9.494,68.605-6.035,82.382c0.753,2.999,3.923,4.69,6.827,3.628
+	c5.151-1.883,13.532-5.322,22.828-10.627C100.5,406.363,101.462,376.372,115.661,349.568z"/>
+<path style="fill:#72CCAF;" d="M0.743,336.891c-1.591,2.658-0.534,6.094,2.275,7.399c12.882,5.984,48.405,19.884,82.051,9.54
+	c42.074-12.935,65.28-58.883,65.28-58.883s-45.01-24.977-87.085-12.042C29.619,293.249,8.039,324.704,0.743,336.891z"/>
+<path style="fill:#57BF93;" d="M29.5,348.141c-1.238-0.457-1.783-1.901-1.157-3.063c5.341-9.924,29.259-50.834,66.142-62.173
+	c3.593-1.104,7.207-1.926,10.813-2.517c-13.096-1.893-27.733-1.879-42.033,2.517c-33.647,10.344-55.227,41.801-62.522,53.988
+	c-1.591,2.659-0.527,6.095,2.283,7.401c10.649,4.945,36.744,15.287,64.464,12.9C49.453,355.026,34.924,350.144,29.5,348.141z"/>
+<path style="fill:#72CCAF;" d="M192.294,444.552c2.658,1.591,6.094,0.534,7.399-2.275c5.984-12.882,19.884-48.405,9.54-82.051
+	c-12.935-42.074-58.883-65.28-58.883-65.28s-24.977,45.01-12.042,87.085C148.651,415.677,180.106,437.256,192.294,444.552z"/>
+<path style="fill:#57BF93;" d="M169.527,382.031c-8.096-26.334-1.341-53.816,4.847-70.695c-12.867-10.751-24.026-16.39-24.026-16.39
+	s-24.977,45.01-12.042,87.084c10.344,33.646,41.798,55.225,53.986,62.521c2.651,1.587,6.088,0.547,7.39-2.255
+	c1.302-2.801,2.98-6.678,4.702-11.376C191.141,419.855,176.088,403.372,169.527,382.031z"/>
+<g>
+	<path style="fill:#EC5569;" d="M402.8,192.089c-28.059-27.23-66.159-23.919-102.499,0.164
+		c-10.116,6.704-11.992,8.126-24.631,17.833c-0.887,0.681-1.535,1.633-1.841,2.709l-11.969,42.163
+		c-0.388,1.368-0.2,2.836,0.522,4.062l26.224,44.51c0.588,0.998,0.826,2.164,0.677,3.312l-12.999,99.968
+		c-0.634,4.879,5.23,7.831,8.772,4.416C318.207,379.267,402.8,296.138,402.8,296.138C431.532,267.405,431.96,220.387,402.8,192.089z
+		"/>
+	<path style="fill:#EC5569;" d="M228.934,257.19l12.18-42.906c0.547-1.927-0.054-3.991-1.556-5.317
+		c-3.599-3.175-10.818-9.487-19.315-16.618c-42.517-35.681-78.98-23.036-104.049,0c-29.92,27.493-28.732,75.317,0,104.049
+		c0,0,85.997,83.66,120.371,115.797c3.142,2.937,8.284,1.005,8.724-3.273l10.367-100.771c0.113-1.097-0.126-2.202-0.681-3.154
+		l-25.529-43.764C228.732,260.01,228.547,258.55,228.934,257.19z"/>
+</g>
+<path style="fill:#E63950;" d="M147.413,296.398c-28.732-28.732-29.92-76.556,0-104.049c10.1-9.281,22.051-16.873,35.502-20.299
+	c-26.524-6.622-49.357,4.343-66.722,20.299c-29.92,27.493-28.732,75.317,0,104.049c0,0,85.997,83.66,120.371,115.797
+	c3.142,2.937,8.284,1.005,8.724-3.273l1.689-16.42C207.178,354.538,147.413,296.398,147.413,296.398z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+					no
+				</label>
+                            </p>
+
+
+                        </fieldset>
+                        <button class="form__button" onclick="sendAnswer()" id="send">send your answer</button>
+                        <p id="total" style="padding-top: 10px"></p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 some" id="findme">
+                <h2>find me</h2>
+                <a href="https://www.linkedin.com/in/krista-haikonen" target="_blank"> <img class="hvr-grow-shadow" id="logo" src="kuvat/linkedin.svg" alt="LinkedIn logo" data-toggle="tooltip" data-html="true"></a>
+            </div>
+            <div class="col-md-4 weather">
+                <h2>weather</h2>
+                <form id="findCity" onsubmit="return false" style="margin-bottom: 20px">
+                    <input type="text" id="city" name="city" placeholder="city"></input>
+                    <br>
+                    <button class="form__button" onclick="findCity()" id="find">find</button>
+                </form>
+                <div id="weather"></div>
+                <!-- tähän default säätietona Helsinki? -->
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 50px; padding-bottom: 0px">
+            <p style="font-size: 10px;">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thank you!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for your answer! I hope it was YES!</p>
+                    <p>You can contact me trought <a href="https://www.linkedin.com/in/krista-haikonen" target="_blank">LinkedIn</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js'></script>
+
+    <script src="curriculum.js"></script>
+</body>
+
+</html>
